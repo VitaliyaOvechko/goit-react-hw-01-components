@@ -1,20 +1,21 @@
 import PropTypes from "prop-types";
+import { Stats, StatsItem } from "./ProfileStats.styled";
 
 export const ProfileStats = ({ user: { stats: { followers, views, likes } } }) => {
-  return <ul>
-    <li>
+  return <Stats>
+    <StatsItem>
       <span>Followers</span>
       <span>{followers}</span>
-    </li>
-    <li>
+    </StatsItem>
+    <StatsItem>
       <span>Views</span>
       <span>{views}</span>
-    </li>
-    <li>
+    </StatsItem>
+    <StatsItem>
       <span>Likes</span>
       <span>{likes}</span>
-    </li>
-  </ul>
+    </StatsItem>
+  </Stats>
 };
 
 ProfileStats.propTypes = {
