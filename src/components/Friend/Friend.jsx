@@ -1,22 +1,22 @@
-import PropTypes from "prop-types";
-import { Avatar, Name, Status } from "./Friend.styled";
+import PropTypes from 'prop-types';
+import { Avatar, Name, Status } from './Friend.styled';
 
 export const Friend = ({ friend: { avatar, name, isOnline } }) => {
-    return <>
-        <Status isOnline={isOnline}/>
-        <Avatar src={avatar} alt="User avatar" width="48" />
-        <Name>{name}</Name>
+  return (
+    <>
+      <Status isOnline={isOnline} />
+      <Avatar src={avatar} alt="User avatar" width="48" />
+      <Name>{name}</Name>
     </>
+  );
 };
 
-
 Friend.propTypes = {
-    friend: PropTypes.arrayOf(
-        PropTypes.shape({
-    avatar: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    isOnline: PropTypes.bool.isRequired,
-        })
-    )
-}
-
+  friend: PropTypes.arrayOf(
+    PropTypes.shape({
+      avatar: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      isOnline: PropTypes.bool.isRequired,
+    })
+  ),
+};
