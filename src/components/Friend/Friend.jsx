@@ -3,7 +3,7 @@ import { Avatar, Name, Status } from "./Friend.styled";
 
 export const Friend = ({ friend: { avatar, name, isOnline } }) => {
     return <>
-        <Status>{isOnline}</Status>
+        <Status isOnline={isOnline}></Status>
         <Avatar src={avatar} alt="User avatar" width="48" />
         <Name>{name}</Name>
     </>
@@ -19,3 +19,4 @@ Friend.propTypes = {
         })
     )
 }
+

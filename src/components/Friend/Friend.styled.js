@@ -5,13 +5,11 @@ export const Status = styled.span`
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  background-color: ${friend => {
-        return friend.isOnline ? 'green' : 'red';
-    }};
-`;
+  background-color: ${props => props.isOnline ? 'green' : 'red'}
+`
 
 export const Avatar = styled.img`
   width: 48px;
-`;
+`
 
-export const Name = styled.p``;
+export const Name = styled.p``
